@@ -1,13 +1,22 @@
 @import "tailwindcss";
 
+/* src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @font-face {
-  font-family: "pricedown";
-  src: url("./pricedown.otf");
+  font-family: "pricedown"; /* This is the name you'll use in Tailwind/CSS */
+  src: url('/fonts/pricedown.otf') format('opentype');
+  /* The url starts with '/' - Vite + base config will make this /gta-iv/fonts/pricedown.otf on deploy */
+  font-weight: normal; /* You can adjust if the font has different weights */
+  font-style: normal;
 }
 
-html,
-body {
+/* Your other styles, e.g., for html, body */
+html, body {
   width: 100%;
   height: 100%;
-  font-family: "pricedown";
+  /* Apply pricedown globally if desired, or apply it to specific elements using Tailwind */
+  font-family: "pricedown", sans-serif; 
 }
